@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 200;
+    padding: 0;
+  }
+  
+  
+  header {
+    background-color: #2e3a46;
+    color: white;
+    text-align: flex;
+    padding: 10px;
+    
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10;
+  }
+  
+  nav ul li {
+    margin: 0 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  
+  }
+  
+  
+  .gallery{
+    display: inline-block;
+    border: 1px solid teal;
+    margin: 5px;
+    width: 300px;
+    text-align: center;
+    
+  }
+  
+  .gallery .descriptution{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .gallery:hover{
+    border: 1px solid teal;
+  }
+  
+  .gallery img{
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  footer {
+    text-align: center;
+    background-color: #2e3a46;
+    color: white;
+    padding: 10px;
+  }
