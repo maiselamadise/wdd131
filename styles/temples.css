@@ -1,12 +1,16 @@
-/* Mobile-first design */
+.temples-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Default mobile layout */
+}
+
 @media screen and (min-width: 868px) {
-    .temples-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .temples-container {
+    grid-template-columns: repeat(2, 1fr); 
   }
-  
-  @media screen and (min-width: 1024px) {
-    .temples-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
+}
+
+@media screen and (min-width: 1024px) {
+  .temples-container {
+    grid-template-columns: repeat(3, 1fr); 
   }
+}

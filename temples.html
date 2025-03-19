@@ -91,13 +91,16 @@
             <div class="description">ST George Temple</div>
         </div>
 
-        </div>
     </main>
 
-
     <footer>
-        <p>&copy; <span id="year"></span>Maisela Manhla Madise - South Africa</p>
+        <p>&copy; <span id="year"></span> Maisela Manhla Madise - South Africa</p>
         <p>Last modified: <span id="lastModified"></span></p>
-    </footer>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = document.lastModified;
+        </script>
+    </footer>    
+   
 </body>
 </html>

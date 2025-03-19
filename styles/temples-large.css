@@ -8,15 +8,18 @@ body {
   header {
     background-color: #2e3a46;
     color: white;
-    text-align: flex;
+    text-align: center; /* Or you can remove this entirely */
     padding: 10px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Or center, depending on your need */
+    align-items: center; /* Vertically aligns items */
     
   }
   
   nav ul {
     display: flex;
     justify-content: flex-end;
-    padding: 10;
+    padding: 10px;
   }
   
   nav ul li {
@@ -28,9 +31,7 @@ body {
     text-decoration: none;
     font-size: 18px;
   
-  }
-  
-  
+  } 
   .gallery{
     display: inline-block;
     border: 1px solid teal;
@@ -40,13 +41,14 @@ body {
     
   }
   
-  .gallery .descriptution{
+  .gallery .description{
     padding: 10px;
     text-align: center;
   }
   
   .gallery:hover{
-    border: 1px solid teal;
+    border: 1px solid darkcyan; 
+    transition: border 0.3s ease-in-out; 
   }
   
   .gallery img{
