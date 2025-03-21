@@ -16,22 +16,22 @@
         <h1>Temple Album</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#old">Old</a></li>
+                <li><a href="#new">New</a></li>
+                <li><a href="#large">Large</a></li>
+                <li><a href="#small">Small</a></li>
             </ul>
         </nav>
     </header>
 
 
     <main>
-        <h1>Home</h1>
+        <h2>Home</h2>
         
         <div class="gallery">
             <a target="_blank" href="Images/Cape_Town_Temple.jpeg">
-               <img src="Images/Cape_Town_Temple.jpeg" alt="Cape Town Temple"> 
+               <img src="Images/Cape_Town_Temple.jpeg" alt="Cape Town Temple in South Africa"> 
             </a>
             <div class="description">Cape Town Temple</div>
         </div>
@@ -102,6 +102,22 @@
             document.getElementById("lastModified").textContent = document.lastModified;
         </script>
     </footer>    
-   
+    
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
