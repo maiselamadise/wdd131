@@ -29,71 +29,72 @@
 
 
     <main>
-        <h2>Home</h2>
-        
-        <div class="gallery">
-            <a target="_blank" href="Images/Cape_Town_Temple.jpeg">
-               <img src="Images/Cape_Town_Temple.jpeg" alt="Cape Town Temple in South Africa"> 
-            </a>
-            <div class="description">Cape Town Temple</div>
-        </div>
+        <section id="home">
+            <h2>Home</h2>
+            
+            <div class="gallery">
+                <a target="_blank" href="Images/Cape_Town_Temple.jpeg">
+                    <img src="Images/Cape_Town_Temple.jpeg" alt="Cape Town Temple in South Africa, showcasing its architecture"> 
+                </a>
+                <div class="description">Cape Town Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/Draper_LDS_Temple.jpg">
-               <img src="Images/Draper_LDS_Temple.jpg" alt="Draper LDS Temple"> 
-            </a>
-            <div class="description">Draper LDS Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/Draper_LDS_Temple.jpg">
+                    <img src="Images/Draper_LDS_Temple.jpg" alt="Draper LDS Temple, a beautiful building with spires"> 
+                </a>
+                <div class="description">Draper LDS Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/Durban Temple.png">
-               <img src="Images/Durban Temple.png" alt="Durban Temple"> 
-            </a>
-            <div class="description">Durban Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/Durban_Temple.png">
+                    <img src="Images/Durban_Temple.png" alt="Durban Temple in South Africa with unique architecture"> 
+                </a>
+                <div class="description">Durban Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/Harare Temple.jpg">
-               <img src="Images/Harare Temple.jpg" alt="Harare Temple"> 
-            </a>
-            <div class="description">Harare Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/Harare_Temple.jpg">
+                    <img src="Images/Harare_Temple.jpg" alt="Harare Temple with its towering spires and grand entrance"> 
+                </a>
+                <div class="description">Harare Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/JHB Temple.jpg">
-               <img src="Images/JHB Temple.jpg" alt="JHB Temple"> 
-            </a>
-            <div class="description">Johannesburg Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/JHB_Temple.jpg">
+                    <img src="Images/JHB_Temple.jpg" alt="Johannesburg Temple with classical architecture and gardens"> 
+                </a>
+                <div class="description">Johannesburg Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/Orem_Utah_temple.webp">
-               <img src="Images/Orem_Utah_temple.webp" alt="Images/Orem_Utah_temple"> 
-            </a>
-            <div class="description">Orem Utah Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/Orem_Utah_temple.webp">
+                    <img src="Images/Orem_Utah_temple.webp" alt="Orem Utah Temple, a stunning modern design"> 
+                </a>
+                <div class="description">Orem Utah Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/Red_Cliffs_Temple.jpg">
-               <img src="Images/Red_Cliffs_Temple.jpg" alt="Images/Red Cliffs Temple"> 
-            </a>
-            <div class="description">Red Cliffs Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/Red_Cliffs_Temple.jpg">
+                    <img src="Images/Red_Cliffs_Temple.jpg" alt="Red Cliffs Temple with surrounding red rock formations"> 
+                </a>
+                <div class="description">Red Cliffs Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/SaltLake Temple.webp">
-               <img src="Images/SaltLake Temple.webp" alt="Images/SaltLake Temple"> 
-            </a>
-            <div class="description">SaltLake Temple</div>
-        </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/SaltLake_Temple.webp">
+                    <img src="Images/SaltLake_Temple.webp" alt="Salt Lake Temple in Utah with tall spires and impressive architecture"> 
+                </a>
+                <div class="description">Salt Lake Temple</div>
+            </div>
 
-        <div class="gallery">
-            <a target="_blank" href="Images/ST George Temple.jpeg">
-               <img src="Images/ST George Temple.jpeg" alt="Images/ST George Temple"> 
-            </a>
-            <div class="description">ST George Temple</div>
-        </div>
-
+            <div class="gallery">
+                <a target="_blank" href="Images/ST_George_Temple.jpeg">
+                    <img src="Images/ST_George_Temple.jpeg" alt="ST George Temple with its majestic structure and vibrant gardens"> 
+                </a>
+                <div class="description">ST George Temple</div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -107,13 +108,10 @@
     
     
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleString();
-
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
