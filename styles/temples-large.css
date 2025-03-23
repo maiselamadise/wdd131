@@ -1,23 +1,39 @@
 :root {
   --primary-color: #0073e6;
-}
 
+  
+}  
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    font-family: 'Roboto', sans-serif;
+    margin: 200px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  header {
+    background-color: #2e3a46;
+    color: white;
+    text-align: center; /* Or you can remove this entirely */
+    padding: 10px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Or center, depending on your need */
+    align-items: center; /* Vertically aligns items */
+    
+  }
+  
 
-header {
-  background-color: #2e3a46;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  nav ul li {
+    margin: 0 30px;
+  }
+  
+  
 .logo h1 {
   margin: 0;
 }
@@ -27,7 +43,7 @@ nav {
 }
 
 .hamburger {
-  display: none;
+  display: none; /* Hidden by default */
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -53,103 +69,85 @@ nav {
   margin: 0 30px;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  } 
+  nav ul li a:hover {
+    color: var(--primary-color); /* Changes color on hover */
+  }
+  
+  nav ul li a:focus {
+    outline: 2px solid var(--primary-color); /* Adds a focus outline for accessibility */
+  }
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid for responsive layout */
+    gap: 10px;
+  }    
+  
+  .gallery{
+    display: inline-block;
+    border: 1px solid teal;
+    margin: 5px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  .gallery .description{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .gallery:hover{
+    border: 1px solid darkcyan; 
+    transition: border 0.3s ease-in-out, transform 0.3s ease;
+    transform: scale(1.05); /* Adds a slight zoom effect */
 }
+  
+  .gallery img{
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  footer {
+    text-align: center;
+    background-color: #2e3a46;
+    color: white;
+    padding: 20px;
+    font-size: 0.9em;
+  }
 
-nav ul li a:hover {
-  color: var(--primary-color);
-}
-
-nav ul li a:focus {
-  outline: 2px solid var(--primary-color);
-}
-
-/* Gallery */
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
-  padding: 20px;
-}
-
-.gallery {
-  border: 1px solid teal;
-  margin: 5px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery:hover {
-  border: 1px solid darkcyan;
-  transform: scale(1.05);
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-footer {
-  text-align: center;
-  background-color: #2e3a46;
-  color: white;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-footer p {
-  margin: 5px;
+  footer p {
+    margin: 5px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Adjust gallery width on medium screens */
   .gallery {
-      width: 45%;
+    width: 45%;
   }
 }
 
 @media (max-width: 480px) {
   footer {
-      padding: 15px;
+    padding: 15px; /* Smaller footer padding on mobile */
   }
 
   header {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column; /* Stack header content on smaller screens */
+    text-align: center;
   }
 
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: #2e3a46;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      padding: 10px;
-  }
-
-  .nav-links.active {
-      display: flex;
-  }
-
-  .nav-links li {
-      margin: 10px 0;
-      text-align: center;
-  }
-
-  .hamburger {
-      display: flex;
-  }
-
+  /* Stacked gallery items on mobile */
   .gallery {
-      width: 100%;
+    width: 100%;
   }
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <link rel="stylesheet" href="styles/local.css">
+    <script src="scripts/cape.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Header content like title and navigation -->
+    </header>
+
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+            <source srcset="images/hero-large.webp" media="(min-width: 601px)">
+            <img src="images/hero-large.webp" alt="Hero Image" />
+        </picture>
+    </section>
+
+    <section class="weather">
+        <h2>Weather</h2>
+        <div class="weather-info">
+            <span id="temperature">Temperature: 5°C</span>
+            <span id="wind-speed">Wind Speed: 10 km/h</span>
+            <span id="windchill">Wind Chill: N/A</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span>. Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
