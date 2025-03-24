@@ -1,35 +1,42 @@
 /* Global CSS Variables */
-:root {
-    --primary-color: #FF5E00; /* Orange from Madagascar flag */
-    --secondary-color: #006F30; /* Green from Madagascar flag */
-    --background-color: #FFF; /* White background */
-    --font-family: Arial, sans-serif;
-}
+/* Example of basic CSS for layout and styling */
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #f4f4f9;
 }
 
 header {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #2c3e50;
+    color: white;
     padding: 20px;
+    text-align: center;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
+h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-/* Weather section */
+p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
 .weather {
-    text-align: center;
+    background-color: #ecf0f1;
     padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.weather h2 {
+    font-size: 2em;
+    color: #34495e;
 }
 
 .weather-info {
@@ -37,28 +44,21 @@ header {
 }
 
 .weather-icon {
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero img {
-        max-width: 100%;
-    }
-
-    .weather-info {
-        font-size: 1em;
-    }
-}
 footer {
     text-align: center;
-    background-color: #FF5E00;
+    padding: 10px;
+    background-color: #2c3e50;
     color: white;
-    padding: 20px;
-    font-size: 0.9em;
-  }
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 
-  footer p {
-    margin: 5px;
+footer p {
+    margin: 0;
+    font-size: 1em;
 }
