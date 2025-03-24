@@ -1,36 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place</title>
+    <title>Weather Page</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles/local.css">
+    <link rel="stylesheet" href="styles/mobi.css">
+    <!-- Link to JS file with defer attribute to load it after HTML parsing -->
     <script src="scripts/cape.js" defer></script>
 </head>
+
 <body>
     <header>
-        <!-- Header content like title and navigation -->
+        <h1>Harare Temple</h1>
+        <div class="hero">
+            <!-- Hero image with responsive srcset for different screen sizes -->
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1200px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 768px)">
+                <img src="Images/Harare_Temple.jpg" alt="Hero Image">
+            </picture>
+        </div>
     </header>
-
-    <section class="hero">
-        <picture>
-            <source srcset="images/hero-small.webp" media="(max-width: 600px)">
-            <source srcset="images/hero-large.webp" media="(min-width: 601px)">
-            <img src="images/hero-large.webp" alt="Hero Image" />
-        </picture>
-    </section>
 
     <section class="weather">
         <h2>Weather</h2>
-        <div class="weather-info">
-            <span id="temperature">Temperature: 5°C</span>
-            <span id="wind-speed">Wind Speed: 10 km/h</span>
-            <span id="windchill">Wind Chill: N/A</span>
-        </div>
+        <p class="weather-info">
+            Temperature: <span id="temperature">5°C</span><br>
+            Wind Speed: <span id="wind-speed">15 km/h</span><br>
+            Wind Chill: <span id="wind-chill">Calculating...</span>
+        </p>
+        <!-- Weather icon for larger view -->
+        <div class="weather-icon" id="weather-icon">⛅</div>
     </section>
 
     <footer>
-        <p>&copy; <span id="current-year"></span>. Last modified: <span id="last-modified"></span></p>
+        <p>Current year: <span id="current-year"></span> | Last modified: <span id="last-modified"></span></p>
     </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Set last modified date
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Example JavaScript for wind chill calculation (this can be customized based on the exact formula)
+        function calculateWindChill(temperature, windSpeed) {
+            // Wind chill formula (Celsius): 
+            // T_wc = 13.12 + 0.6215 * T - 11.37 * v^0.16 + 0.3965 * T * v^0.16
+            const windChill = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
+            return windChill.toFixed(2);
+        }
+
+        // Example temperature and wind speed (can be dynamically fetched from an API)
+        let temperature = 5; // Celsius
+        let windSpeed = 15; // km/h
+
+        // Calculate wind chill and update the page
+        let windChill = calculateWindChill(temperature, windSpeed);
+        document.getElementById('wind-chill').textContent = `${windChill}°C`;
+    </script>
 </body>
+
 </html>
