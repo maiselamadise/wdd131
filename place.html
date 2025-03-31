@@ -20,22 +20,20 @@
     </header>
 
     <main>
-
-    <!-- Hero Image Section -->
+        <!-- Hero Image Section -->
         <section class="hero">
             <picture>
                 <source srcset="images/images/Kgalagadi.webp" media="(min-width: 1024px)">
                 <source srcset="images/images/blyde-river-canyon.webp" media="(min-width: 600px)">
-                <img src="images/Kgalagadi.webp" alt="Beautiful view of South Afica">
+                <img src="images/Kgalagadi.webp" alt="Beautiful view of South Africa">
             </picture>
         </section>
 
-    <!-- Weather Section -->
+        <!-- Weather Section -->
         <section class="weather">
             <h2>Weather <span id="weather-icon">
-
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path d="M19 16a3 3 0 0 0-3-3h-1.87A4.506 4.506 0 0 0 10 9.5 4.5 4.5 0 0 0 5.87 13H4a3 3 0 0 0 0 6h15a3 3 0 0 0 0-6zm-4 2H9v-2h6v2z"/>
+                    <path d="M19 16a3 3 0 0 0-3-3h-1.87A4.506 4.506 0 0 0 10 9.5 4.5 4.5 0 0 0 5.87 13H4a3 3 0 0 0 0 6h15a3 3 0 0 0 0-6zm-4 2H9v-2h6v2z"/>
                 </svg>
             </span></h2>
 
@@ -50,5 +48,14 @@
         <p>Current Year: <span id="current-year"></span></p>
         <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set the current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Set the last modified date
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 </html>
