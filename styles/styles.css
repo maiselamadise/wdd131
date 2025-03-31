@@ -8,16 +8,6 @@
 
 /* General Styles */
 body {
-    In styles.css */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-h1, h2 {
-    font-family: 'Lora', serif;
-}
-  
-
     font-family: var(--font-family);
     background-color: var(--background-color);
     margin: 0;
@@ -33,6 +23,10 @@ header {
     padding: 20px;
 }
 
+header h1 {
+    margin: 0;
+}
+
 /* Hero Section */
 .hero img {
     width: 100%;
@@ -45,6 +39,33 @@ header {
     background-color: #fff;
     border-radius: 8px;
     margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.weather p {
+    font-size: 1.2em;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+/* Typography for headings */
+h1, h2 {
+    font-family: 'Lora', serif;
 }
 
 /* Media Queries for Responsiveness */
@@ -56,9 +77,17 @@ header {
 }
 
 @media (max-width: 600px) {
-    /* Example for smaller screen sizes */
+    /* Adjust header font size for smaller screens */
     header {
         font-size: 1.5em;
+    }
+
+    .weather h2 {
+        font-size: 1.2em;
+    }
+
+    .weather p {
+        font-size: 1em;
     }
 }
 
@@ -66,3 +95,4 @@ header {
 .weather h2::after {
     content: " ⛅";  /* Weather icon for large view */
 }
+
