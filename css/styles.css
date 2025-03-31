@@ -1,0 +1,58 @@
+/* Global Variables */
+:root {
+    --primary-color: #FF5733; /* Example color, change as needed */
+    --secondary-color: #333;
+    --background-color: #f0f0f0;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--secondary-color);
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Weather Section */
+.weather {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Example for smaller screen sizes */
+    header {
+        font-size: 1.5em;
+    }
+}
+
+/* Pseudo-element for Weather Icon */
+.weather h2::after {
+    content: " ⛅";  /* Weather icon for large view */
+}
