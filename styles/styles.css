@@ -8,6 +8,16 @@
 
 /* General Styles */
 body {
+    In styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+}
+  
+
     font-family: var(--font-family);
     background-color: var(--background-color);
     margin: 0;
