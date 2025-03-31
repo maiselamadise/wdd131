@@ -1,10 +1,10 @@
 
 /* Global Variables */
 :root {
-    --primary-color: #FF573; /* Example color, change as needed */
-    --secondary-color: #3333;
+    --primary-color: #FF5733; /* Example color, change as needed */
+    --secondary-color: #333;
     --background-color: #f0f0f0;
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Roboto', sans-serif;
 }
 
 /* General Styles */
