@@ -1,24 +1,22 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* Ensures padding and border are included in element's total width and height */
-    outline: none;  /* Removes outline for focus, be mindful of accessibility */
+    box-sizing: border-box; 
+    outline: none;  
 }
 
-/* :root pseudo-class for CSS variables */
 :root {
-    --primary-color: #2980b9;      /* Primary blue color */
-    --secondary-color: #344958;    /* Dark grey-blue for header */
-    --accent-color: #e74c3c;       /* Red accent color */
-    --text-color: #333;            /* Default text color */
-    --background-color: #f4f4f4;   /* Light background color */
-    --light-grey: #ecf0f1;         /* Lighter grey for backgrounds */
-    --white-color: #fff;           /* White color for headings */
-    --font-family: 'Roboto', sans-serif; /* Font family */
-    --font-size-default: 1.2rem;   /* Default font size */
-    --font-size-heading: 1.2rem;     /* Heading font size */
-    --font-size-large-heading: 3rem; /* Large heading font size */
+    --primary-color: #2980b9;      
+    --secondary-color: #344958;    
+    --accent-color: #e74c3c;      
+    --text-color: #333;           
+    --background-color: #f4f4f4;   
+    --light-grey: #ecf0f1;        
+    --white-color: #fff;           
+    --font-family: 'Roboto', sans-serif; 
+    --font-size-default: 1.2rem;   
+    --font-size-heading: 1.2rem;     
+    --font-size-large-heading: 3rem;
 }
 
 /* Body and overall layout */
@@ -28,9 +26,9 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
-    padding: 0 10%;  /* Adjust the left and right padding to 10% of the viewport width for responsiveness */
-    background-size: cover;  /* Makes sure the background image covers the entire viewport */
-    background-position: center;  /* Centers the background image */
+    padding: 0 10%;  
+    background-size: cover;  
+    background-position: center; 
 }
 
 /* Header styling */
