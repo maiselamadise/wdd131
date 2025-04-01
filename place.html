@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Welcome to South Africa. Find information about its weather, history, and more.">
-    <meta name="keywords" content="Johannesburg, country, travel, weather, guide">
+    <meta name="description" content="Explore South Africa - weather, travel tips, and more.">
+    <meta name="keywords" content="Johannesburg, travel guide, weather, South Africa">
     <meta name="author" content="Maisela Manhla Madise">
-    <title>Welcome to South Africa</title>
+    <title>South Africa Travel Guide - Weather, History, and More</title>
+    
+    <!-- Google Fonts Embed Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/scripts.js" defer></script>
-    <!-- Link to Font Awesome for weather icons -->
+
+    <!-- Font Awesome for Weather Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -19,9 +24,10 @@
     <header>
         <h1>South Africa</h1>
         <picture>
-            <source srcset="Images/Cape_Town_Temple.jpeg" media="(min-width: 800px)">
-            <source srcset="Images/JHB_Temple.jpg" media="(min-width: 500px)">
+            <source srcset="Images/Cape_Town_Temple.webp" type="image/webp" media="(min-width: 800px)">
+            <source srcset="Images/JHB_Temple.webp" type="image/webp" media="(min-width: 500px)">
             
+        </picture>
     </header>
 
     <div class="Country-container">
@@ -29,7 +35,7 @@
             <h2 id="data">Data</h2>
             <p id="area">Area: 1,219,602 km²</p>
             <p id="population">Population: 63.21 million</p>
-            <p id="capital">Capital: Pretoria, Cape Town and Bloemfontein</p>
+            <p id="capital">Capital: Pretoria, Cape Town, and Bloemfontein</p>
             <p id="language">Language: English</p>
             <p id="currency">Currency: Rands</p>
             <p id="time-zone">Time-Zone: +2</p>
@@ -52,35 +58,30 @@
     </footer>
 
     <script>
-        // Update current year and last modified date in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
         const lastModifiedDate = new Date(document.lastModified);
         document.getElementById('last-modified').textContent = lastModifiedDate.toLocaleDateString();
 
-        // Set the time zone dynamically
         document.getElementById('time-zone').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-        // Fetch weather data from OpenWeatherMap API
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Harare&appid=your_actual_api_key&units=metric') 
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Harare&appid=your_actual_api_key&units=metric')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('temp').textContent = `${data.main.temp}°C`;
                 document.getElementById('wind-speed').textContent = `${data.wind.speed} km/h`;
                 document.getElementById('wind-chill').textContent = `${data.main.feels_like}°C`;
-                
-                // Update weather icon based on weather condition
+
                 document.getElementById('weather-icon').innerHTML = getWeatherIcon(data.weather[0].main);
             })
             .catch(error => console.error('Error fetching weather data:', error));
 
-        // Function to return appropriate weather icon
         function getWeatherIcon(weatherCondition) {
             switch (weatherCondition) {
                 case 'Clear': return '<i class="fas fa-sun"></i>';
                 case 'Clouds': return '<i class="fas fa-cloud"></i>';
                 case 'Rain': return '<i class="fas fa-cloud-showers-heavy"></i>';
                 case 'Snow': return '<i class="fas fa-snowflake"></i>';
-                default: return '<i class="fas fa-cloud-sun"></i>'; // More neutral fallback
+                default: return '<i class="fas fa-cloud-sun"></i>';
             }
         }
     </script>
