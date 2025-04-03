@@ -1,0 +1,75 @@
+/* General gallery styles */
+.gallery {
+  margin: 15px;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Image hover effect */
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);  /* Zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation link hover effect */
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #0073e6;  /* Blue background */
+  border-radius: 5px;
+}
+
+/* Description text hover effect */
+.description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.description:hover {
+  color: #0073e6;  /* Blue color on hover */
+  font-weight: bold;  /* Bold text */
+}
+
+/* Footer hover effect */
+footer p {
+  margin: 5px;
+  transition: color 0.3s ease;
+}
+
+footer p:hover {
+  color: #0073e6;  /* Blue color on hover */
+}
+
+/* Make the gallery responsive */
+@media (max-width: 768px) {
+  .gallery {
+      width: 48%;
+      margin: 10px 1%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
