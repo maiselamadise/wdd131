@@ -1,5 +1,6 @@
 :root {
     --primary-color: #0073e6;
+
   
     
   }  
@@ -14,11 +15,11 @@
     header {
       background-color: #2e3a46;
       color: white;
-      text-align: center; /* Or you can remove this entirely */
+      text-align: center; 
       padding: 10px;
-      display: flex; /* Use flexbox for layout */
-      justify-content: space-between; /* Or center, depending on your need */
-      align-items: center; /* Vertically aligns items */
+      display: flex;
+      justify-content: space-between; 
+      align-items: center; 
       
     }
     
@@ -39,15 +40,15 @@
       transition: color 0.3s ease;
     } 
     nav ul li a:hover {
-      color: var(--primary-color); /* Changes color on hover */
+      color: var(--primary-color); 
     }
     
     nav ul li a:focus {
-      outline: 2px solid var(--primary-color); /* Adds a focus outline for accessibility */
+      outline: 2px solid var(--primary-color); 
     }
     .gallery-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid for responsive layout */
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
       gap: 10px;
     }    
     
@@ -57,9 +58,9 @@
       margin: 5px;
       width: 300px;
       text-align: center;
-      border-radius: 8px; /* Adds rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
-      transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     }
     
     .gallery .description{
@@ -70,7 +71,7 @@
     .gallery:hover{
       border: 1px solid darkcyan; 
       transition: border 0.3s ease-in-out, transform 0.3s ease;
-      transform: scale(1.05); /* Adds a slight zoom effect */
+      transform: scale(1.05); 
   }
     
     .gallery img{
@@ -105,7 +106,7 @@
     }
   
     header {
-      flex-direction: column; /* Stack header content on smaller screens */
+      flex-direction: column; 
       text-align: center;
     }
   
