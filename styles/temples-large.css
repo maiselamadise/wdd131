@@ -1,117 +1,176 @@
-:root {
-    --primary-color: #0073e6;
+/* General styles for the page */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  box-sizing: border-box;
 
-  
-    
-  }  
-  body {
-      font-family: 'Roboto', sans-serif;
-      margin: 200px;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    
-    header {
-      background-color: #2e3a46;
-      color: white;
-      text-align: center; 
-      padding: 10px;
-      display: flex;
-      justify-content: space-between; 
-      align-items: center; 
-      
-    }
-    
-    nav ul {
-      display: flex;
-      justify-content: flex-end;
-      padding: 10px;
-    }
-    
-    nav ul li {
-      margin: 0 30px;
-    }
-    
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    } 
-    nav ul li a:hover {
-      color: var(--primary-color); 
-    }
-    
-    nav ul li a:focus {
-      outline: 2px solid var(--primary-color); 
-    }
-    .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-      gap: 10px;
-    }    
-    
-    .gallery{
-      display: inline-block;
-      border: 1px solid teal;
-      margin: 5px;
-      width: 300px;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-      transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .gallery .description{
-      padding: 10px;
-      text-align: center;
-    }
-    
-    .gallery:hover{
-      border: 1px solid darkcyan; 
-      transition: border 0.3s ease-in-out, transform 0.3s ease;
-      transform: scale(1.05); 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
   }
-    
-    .gallery img{
-      width: 100%;
-      height: auto;
-    }
-    
-    
-    footer {
-      text-align: center;
-      background-color: #2e3a46;
-      color: white;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-  
-    footer p {
-      margin: 5px;
+}    
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+
+}
+
+nav ul li {
+  display: inline-flex;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Accessibility focus styles */
+nav ul li a:focus {
+  outline: 3px solid #ffeb3b;
+  background-color: #4CAF50;
+  outline: 2px solid var(--primary-color); 
+}
+.gallery-container { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 100px;
+} 
+
+/* Main content */
+main {
+  padding: 20px;
+}
+
+/* Gallery styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+
+  display: inline-block;
+  border: 1px solid teal;
+  margin: 5px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.temple-card {
+  width: 250px;
+
+  text-align: center;
+  background-color: lightgrey;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer; /* Indicates the card is clickable */
+}
+
+.temple-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.temple-card h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.temple-card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6; /* Improves readability */
+}
+
+.temple-card figcaption {
+  padding: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  .gallery {
+    justify-content: center;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    /* Adjust gallery width on medium screens */
-    .gallery {
-      width: 45%;
-    }
+
+  .temple-card {
+    width: 100%;
+    max-width: 350px; /* Adjusts card size on smaller screens */
   }
-  
-  @media (max-width: 480px) {
-    footer {
-      padding: 15px; /* Smaller footer padding on mobile */
-    }
-  
-    header {
-      flex-direction: column; 
-      text-align: center;
-    }
-  
-    /* Stacked gallery items on mobile */
-    .gallery {
-      width: 100%;
-    }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 0; /* Less padding for smaller screens */
   }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1em; /* Larger links for mobile devices */
+  }
+
+  .temple-card {
+    width: 100%;
+    max-width: 300px; /* Further reduce card size for very small screens */
+  }
+}

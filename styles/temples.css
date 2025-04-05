@@ -1,7 +1,7 @@
 /* General gallery styles */
 .gallery {
   margin: 15px;
-  display: inline-block;
+  display: flex ;
   width: 100%;
   max-width: 300px;
   text-align: center;
@@ -32,8 +32,12 @@ nav a {
 
 nav a:hover {
   color: #fff;
-  background-color: #0073e6;  /* Blue background */
+  background-color: #0073e6; 
   border-radius: 5px;
+}
+
+nav a:focus {
+  outline: 2px solid #0073e6;  /* Adding focus outline for accessibility */
 }
 
 /* Description text hover effect */
@@ -65,11 +69,16 @@ footer p:hover {
       width: 48%;
       margin: 10px 1%;
   }
+  .gallery img {
+    height: auto; /* Ensure images scale properly on smaller screens */  
 }
-
+}
 @media (max-width: 480px) {
   .gallery {
       width: 100%;
       margin: 10px 0;
   }
+  .gallery img {
+    height: auto; /* Ensure images scale properly on mobile screens */
+  }  
 }
