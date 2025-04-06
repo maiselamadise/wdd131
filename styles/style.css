@@ -1,10 +1,15 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 1rem;
     max-width: 600px;
     margin: auto;
     background-color: white;
   }
+
+  
+h1, legend {
+  font-family: 'Playfair Display', serif;
+}
   
   label, legend {
     display: block;
