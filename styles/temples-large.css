@@ -16,7 +16,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 header h1 {
@@ -101,10 +100,11 @@ h2 {
 
 /* Footer */
 footer {
-  background-color:#2c3e50;
+  background-color: #2c3e50;
   padding: 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  border-top: 2px solid #34495e; /* Adds a slight separation */
 }
 
 footer .footer-info {
@@ -130,3 +130,23 @@ footer .social-links li a:hover {
   color: #007BFF;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+}
