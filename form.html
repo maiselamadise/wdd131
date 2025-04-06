@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reviews on the amazing products that we offer, come choose your choice. ">
+  <meta name="author" content="Maisela Manhla Madise">
   <title>Product Review Form</title>
+
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/form.css" />
   <script src="scripts/form.js" defer></script>
 
 </head>
@@ -13,10 +16,11 @@
   <main>
     <h1>Product Review Form</h1>
     <form action="review.html" method="get" id="reviewForm">
+      
       <!-- Product Name -->
       <label for="productSelect">Product Name:</label>
       <select id="productSelect" name="product" required>
-        <option value="" disabled selected>Select a Product ...</option>
+        <option value="" hidden>Select a Product ...</option>
       </select>
 
       <!-- Overall Rating -->
@@ -43,10 +47,10 @@
       <!-- Useful Features -->
       <fieldset>
         <legend>Useful Features:</legend>
-        <label><input type="checkbox" id="feature1" name="features" value="Durability" /> Durability</label>
-        <label><input type="checkbox" id="feature2" name="features" value="Design" /> Design</label>
-        <label><input type="checkbox" id="feature3" name="features" value="Performance" /> Performance</label>
-        <label><input type="checkbox" id="feature4" name="features" value="Ease of Use" /> Ease of Use</label>
+        <label><input type="checkbox" name="features[]" value="Durability" /> Durability</label>
+        <label><input type="checkbox" name="features[]" value="Design" /> Design</label>
+        <label><input type="checkbox" name="features[]" value="Performance" /> Performance</label>
+        <label><input type="checkbox" name="features[]" value="Ease of Use" /> Ease of Use</label>
       </fieldset>
 
       <!-- Written Review -->
@@ -55,16 +59,22 @@
 
       <!-- User Name -->
       <label for="userName">Your Name:</label>
-      <input type="text" id="userName" name="userName" />
+      <input type="text" id="userName" name="userName" required />
 
-      <!-- Submit -->
-      <input type="submit" value="Submit Review" />
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit</button>
+
     </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Company</p>
+    <p>&copy; <span id="current-year"></span> ✨ Maisela M Madise ✨ South Africa | Last modified: <span id="last-modified"></span></p>
   </footer>
 
+  <!-- Script to populate footer -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+  </script>
 </body>
 </html>
