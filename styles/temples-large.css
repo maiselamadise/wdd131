@@ -1,176 +1,121 @@
-/* General styles for the page */
+/* Body Background and General Text */
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text for better readability */
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
-  box-sizing: border-box;
-
-  min-height: 100vh; 
-  display: flex;
-  flex-direction: column
 }
 
+/* Header */
 header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px 0;
+  background-color: #2c3e50; /* Dark blue for header */
+  color: #ffffff; /* White text for header */
+  padding: 20px;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 header h1 {
-  margin: 0;
-  font-size: 1.5em;
-}
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5em;
-  }
-}    
-/* Navigation styles */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-
+  font-size: 2.5rem;
 }
 
-nav ul li {
-  display: inline-flex;
-  margin: 0 15px;
+header nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-nav ul li a {
-  color: white;
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #ffffff; /* White links */
   text-decoration: none;
-  font-weight: 700;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+header nav ul li a:hover {
+  color: #f39c12; /* Gold color on hover for contrast */
 }
 
-/* Accessibility focus styles */
-nav ul li a:focus {
-  outline: 3px solid #ffeb3b;
-  background-color: #4CAF50;
-  outline: 2px solid var(--primary-color); 
-}
-.gallery-container { 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  gap: 100px;
-} 
-
-/* Main content */
+/* Main Section */
 main {
+  padding: 20px;
+  background-color: #ffffff; /* White background for the main content */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333; /* Dark text for subheadings */
+}
+
+/* Gallery Container */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   padding: 20px;
 }
 
-/* Gallery styles */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 20px;
-
-  display: inline-block;
-  border: 1px solid teal;
-  margin: 5px;
-  width: 300px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-
-}
-
+/* Temple Cards */
 .temple-card {
-  width: 250px;
-
-  text-align: center;
-  background-color: lightgrey;
-  border: 2px solid #ddd;
-  border-radius: 10px;
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer; /* Indicates the card is clickable */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .temple-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-10px); /* Subtle lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
 .temple-card img {
   width: 100%;
   height: auto;
-  border-bottom: 2px solid #ddd;
+  object-fit: cover;
 }
 
+/* Title in Temple Card */
 .temple-card h3 {
-  font-size: 1.2em;
-  color: #333;
-  margin: 10px 0;
-}
-
-.temple-card p {
-  font-size: 1em;
-  color: #666;
-  line-height: 1.6; /* Improves readability */
-}
-
-.temple-card figcaption {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark blue text for title */
   padding: 10px;
+  background-color: #ecf0f1; /* Light gray background behind title */
 }
 
-/* Footer styles */
+/* Paragraph Text in Temple Card */
+.temple-card p {
+  color: #555; /* Medium gray for text */
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Footer */
 footer {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #34495e; /* Dark gray-blue background */
+  color: #ffffff; /* White text */
+  padding: 20px;
   text-align: center;
-  padding: 15px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
-/* Media Queries for responsive design */
-@media (max-width: 768px) {
-  .gallery {
-    justify-content: center;
-  }
-
-  .temple-card {
-    width: 100%;
-    max-width: 350px; /* Adjusts card size on smaller screens */
-  }
+footer p {
+  font-size: 0.9rem;
 }
 
-@media (max-width: 480px) {
-  header {
-    padding: 15px 0; /* Less padding for smaller screens */
-  }
+footer a {
+  color: #f39c12; /* Gold color for links in footer */
+  text-decoration: none;
+}
 
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    font-size: 1.1em; /* Larger links for mobile devices */
-  }
-
-  .temple-card {
-    width: 100%;
-    max-width: 300px; /* Further reduce card size for very small screens */
-  }
+footer a:hover {
+  text-decoration: underline; /* Underline effect for better visibility on hover */
 }
