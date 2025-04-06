@@ -28,28 +28,32 @@
     </header>
 
     <main>
+        <!-- Filter Section -->
+        <section id="filters">
+            <h2>Filter Temples</h2>
+            <form id="filter-form">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="">All</option>
+                    <option value="large">Large</option>
+                    <option value="small">Small</option>
+                </select>
+                
+                <label for="age">Age:</label>
+                <select id="age" name="age">
+                    <option value="">All</option>
+                    <option value="old">Old</option>
+                    <option value="new">New</option>
+                </select>
+                
+                <button type="submit">Apply Filters</button>
+            </form>
+        </section>
+
+        <!-- Gallery Section -->
         <section id="home">
             <h2>Home</h2>
             <div class="gallery-container"></div>
-            <section id="filters">
-                <h2>Filter Temples</h2>
-                <form id="filter-form">
-                    <label for="size">Size:</label>
-                    <select id="size" name="size">
-                        <option value="">All</option>
-                        <option value="large">Large</option>
-                        <option value="small">Small</option>
-                    </select>
-                    
-                    <label for="age">Age:</label>
-                    <select id="age" name="age">
-                        <option value="">All</option>
-                        <option value="old">Old</option>
-                        <option value="new">New</option>
-                    </select>
-                    
-                    <button type="submit">Apply Filters</button>
-                </form>    
         </section>
     </main>
 
@@ -61,6 +65,6 @@
             document.getElementById("lastModified").textContent = document.lastModified;
         </script>
     </footer>    
-    
+
 </body>
 </html>
