@@ -13,7 +13,7 @@ h1, legend {
   label, legend {
     display: block;
     margin-top: 1rem;
-    font-weight: thin;
+    font-weight: bold;
   }
   
   input, select, textarea {
