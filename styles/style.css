@@ -3,15 +3,16 @@ body {
     padding: 1rem;
     max-width: 600px;
     margin: auto;
-    background-color: gray;
+    background-color:gray;
   }
 
+  
 h1, legend {
   font-family: 'Playfair Display', serif;
 }
   
   label, legend {
-    display: block;
+    display: inline;
     margin-top: 1rem;
     font-weight: bold;
   }
@@ -34,7 +35,7 @@ h1, legend {
   
   .rating label {
     font-size: 2rem;
-    color: #333;
+    color: #555;
     cursor: pointer;
   }
   
@@ -45,10 +46,22 @@ h1, legend {
     color: gold;
   }
   
+  /* Optional: Remove if using button.submit-btn instead */
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: auto;
+    border-radius: 0.3rem;
+  }
   
   /* Main Submit Button Styling */
   .submit-btn {
-    background-color: #388E3C;
+    background-color: #4CAF50;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -65,7 +78,7 @@ h1, legend {
   
   footer {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     color: black;
   }
   
