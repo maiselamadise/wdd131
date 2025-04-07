@@ -35,7 +35,7 @@ h1, legend {
   
   .rating label {
     font-size: 2rem;
-    color: #555;
+    color: #333;
     cursor: pointer;
   }
   
@@ -46,22 +46,10 @@ h1, legend {
     color: gold;
   }
   
-  /* Optional: Remove if using button.submit-btn instead */
-  input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 0.75rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    width: auto;
-    border-radius: 0.3rem;
-  }
   
   /* Main Submit Button Styling */
   .submit-btn {
-    background-color: #4CAF50;
+    background-color: #388E3C;
     color: white;
     padding: 12px 24px;
     border: none;
