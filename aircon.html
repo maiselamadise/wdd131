@@ -1,53 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <meta name="description" content="Product Review Form">
-    <meta name="keywords" content="Product Review Form">
-    <meta name="author" content="Demetrio Aris Gonzalez">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../project/styles/style.css">
-    <link rel="stylesheet" href="../project/styles/style-large.css">
-    <link rel="stylesheet" href="styles/pro.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional air conditioning and refrigeration solutions for homes and businesses." />
+  <meta name="author" content="Maisela Manhla Madise"/>
+  <title>CoolTech Solutions</title>
+  
+  <link rel="stylesheet" href="styles/aircon.css" />
+  <script defer src="scripts/aircon.js"></script>
 </head>
-
 <body>
-    <header>
-        <img src="../project/images/logo-circle-web-Programming-modified.webp" alt="Logo Demetrio Aris" width="354"
-            height="354">
-        <button id="menu"></button>
-        <nav class="navigation">
-            <a  href="../project/index.html">Home</a>
-            <a href="../project/projects.html">Projects</a>
-            <a href="../project/contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <div class="container-project-box"></div>
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Welcome to CoolTech Solutions</h1>
+      <p>Your trusted experts in air conditioning and refrigeration technology.</p>
+      <img src="images/hero.jpg" alt="Air conditioning unit" loading="lazy" />
+    </section>
+    <section class="features">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✔ Energy-efficient systems</li>
+        <li>✔ Expert installation & repair</li>
+        <li>✔ 24/7 emergency support</li>
+      </ul>
+    </section>
+    <section class="testimonial">
+      <h2>What Our Clients Say</h2>
+      <div id="testimonial-container"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 CoolTech Solutions. All rights reserved.</p>
+  </footer>
 
-    </main>
-    <footer>
-        <p>&copy;<span id="currentyear">2024</span> - Demetrio Aris Gonzalez - Panamá</p>
-        <p id="lastModified">Last Modified: </p>
-        <div class="social">
-            <a href="https://github.com/demetrioaris" target="_blank" title="GitHub"><img class="icon github-logo"
-                    src="../project/images/logos/github-mark-white.png" alt="GitHub icon" /></a>
-            <a href="https://x.com/demetrio_aris" target="_blank" title="X"><img class="icon x-logo"
-                    src="../project/images/logos/logo-x-version-white.png" alt="X logo" /></a>
-            <a href="https://www.linkedin.com/in/demetrio-aris" target="_blank" title="LinkedIn"><img
-                    class="icon linkedin-logo" src="../project/images/logos/linkedin-logo-white.png"
-                    alt="LinkedIn icon" /></a>
-        </div>
-    </footer>
-    <script src="../project/scripts/base.js" defer></script>
-    <script src="../project/scripts/project.js" defer></script>
+  <!-- Services Page Content (Hidden by default) -->
+  <template id="services-page">
+    <section class="services">
+      <h1>Our Services</h1>
+      <ul>
+        <li><strong>Residential AC Installation:</strong> Cool your home with our efficient systems.</li>
+        <li><strong>Commercial HVAC:</strong> Scalable and reliable solutions for businesses.</li>
+        <li><strong>Refrigeration Maintenance:</strong> Keep your units running all year.</li>
+        <li><strong>Emergency Repairs:</strong> We’re here 24/7 when you need us most.</li>
+      </ul>
+      <img src="images/services.jpg" alt="Technician repairing a unit" loading="lazy" />
+    </section>
+  </template>
 
+  <!-- Contact Page Content (Hidden by default) -->
+  <template id="contact-page">
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="form-response"></div>
+    </section>
+  </template>
 </body>
-
 </html>
