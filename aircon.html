@@ -8,7 +8,7 @@
   <title>Amara CoolTech</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/aircon.css" />
@@ -16,7 +16,7 @@
   <!-- Open Graph for social media -->
   <meta property="og:title" content="Amara CoolTech" />
   <meta property="og:description" content="Professional air conditioning and refrigeration solutions for homes and businesses." />
-  <meta property="og:image" content="Images/refrigerated.jpg" />
+  <meta property="og:image" content="images/refrigerated.jpg" />
   <meta property="og:url" content="https://yourdomain.com" />
 
   <!-- JavaScript -->
@@ -26,7 +26,7 @@
   <header>
     <div class="logo-container">
       <a href="index.html" data-page="home">
-        <img src="Images/logo.png" alt="Amara CoolTech Logo" class="site-logo" />
+        <img src="images/logo.png" alt="Amara CoolTech Logo" class="site-logo" />
       </a>
     </div>
     <nav aria-label="Main navigation">
@@ -42,7 +42,7 @@
     <section class="hero">
       <h1>Welcome to Amara CoolTech</h1>
       <p>Your trusted experts in air conditioning and refrigeration technology.</p>
-      <img src="Images/refrigerated.jpg" alt="Outdoor air conditioning unit on a rooftop" loading="lazy" />
+      <img src="images/refrigerated.jpg" alt="Outdoor air conditioning unit on a rooftop" loading="lazy" />
     </section>
     <section class="features">
       <h2>Why Choose Us?</h2>
@@ -59,10 +59,27 @@
       </div>
     </section>
   </main>
+    <footer>
+      <p>&copy; <span id="year"></span> Maisela Manhla Madise - Amara CoolTech.
+      <p>Last modified: <span id="lastModified"></span></p>
 
-  <footer>
-    <p>&copy; 2025 Amara CoolTech. All rights reserved.</p>
-    <p>Contact us: <a href="mailto:info@cooltech.com">info@cooltech.com</a></p>
+      <!-- Additional Footer Content -->
+      <div class="footer-info">
+          <p>For inquiries, contact us at: <a href="mailto:info@templealbum.com">info@templealbum.com</a></p>
+          <p>Follow us on social media:</p>
+          <ul class="social-links">
+              <li><a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a></li>
+              <li><a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a></li>
+              <li><a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a></li>
+          </ul>
+      </div>
+  
+      <script>
+          document.getElementById("year").textContent = new Date().getFullYear();
+          document.getElementById("lastModified").textContent = document.lastModified;
+      </script>
+  </footer>
+  
   </footer>
 
   <!-- Templates -->
@@ -76,7 +93,7 @@
         <li><strong>Refrigeration Maintenance:</strong> Keep your units running all year.</li>
         <li><strong>Emergency Repairs:</strong> We’re here 24/7 when you need us most.</li>
       </ul>
-      <img src="Images/Air-Conditioning.jpg" alt="Technician repairing a unit" loading="lazy" />
+      <img src="images/Air-Conditioning.jpg" alt="Technician repairing a unit" loading="lazy" />
     </section>
   </template>
 
