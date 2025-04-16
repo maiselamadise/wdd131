@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submitted Reviews</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/aircon.css" />
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="review">
+        <h1>Leave a Review</h1>
+        <form action="review.html" method="get" id="review-form">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+      
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+      
+          <label for="rating">Rating (1–5):</label>
+          <select id="rating" name="rating" required>
+            <option value="">Select</option>
+            <option value="1">1 - Very Poor</option>
+            <option value="2">2 - Poor</option>
+            <option value="3">3 - Average</option>
+            <option value="4">4 - Good</option>
+            <option value="5">5 - Excellent</option>
+          </select>
+      
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" rows="4" required></textarea>
+      
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+      
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> ✨ Maisela M Madise ✨ South Africa</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
